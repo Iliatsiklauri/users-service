@@ -13,10 +13,10 @@ app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)("tiny"));
 app.use(express_1.default.urlencoded({ extended: true }));
-app.use("/Ads", routes_1.default);
+app.use("/", routes_1.default);
 database_connect_1.AppDataSource.initialize().then(async () => {
     console.log("connected to database");
 });
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("server started");
 });

@@ -12,12 +12,12 @@ app.use(cors());
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/Ads", usersRouter);
+app.use("/", usersRouter);
 
 AppDataSource.initialize().then(async () => {
   console.log("connected to database");
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("server started");
 });
